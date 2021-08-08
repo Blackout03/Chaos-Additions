@@ -1,15 +1,15 @@
 modLoader="javafml"
 loaderVersion="[36,)"
-issueTrackerURL="https://github.com/Chaos-Awakens-Mod-Team/ChaosAwakens/issues"
-displayURL="https://www.curseforge.com/minecraft/mc-mods/chaos-awakens"
+issueTrackerURL="https://github.com/Blackout03/Chaos-Awakens-Additions/issues"
+displayURL=""
 license="All Rights Reserved. Code from before v0.9 is licensed GNU LGPL v2.1."
 
 [[mods]]
 modId="caadditions"
 version="${file.jarVersion}"
-displayName="Chaos Awakens"
-description='''Relive the old OreSpawn mod in newer Minecraft versions!'''
-itemIcon="chaosawakens:ultimate_pickaxe"
+displayName="Chaos Awakens Additions"
+description='''Some Additions to Chaos Awakens!'''
+itemIcon="caadditions:ultimate_aiot"
 configBackground="chaosawakens:textures/gui/advancement_bg.png"
 
 [[dependencies.caadditions]]

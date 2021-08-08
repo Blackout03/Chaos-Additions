@@ -1,0 +1,12 @@
+{
+  "tooltip.caadditions.default.tooltip": "Press Shift to see More Information!",
+  "tooltip.caadditions.default.tooltip_1": "Hold Shift and Right Click Wood to Strip it!",
+  "tooltip.caadditions.default.tooltip_2": "Hold Shift and Right Click Grass to Hoe it!",
+  "tooltip.caadditions.default.tooltip_3": "Right Click Grass to Path it!",
+
+  "item.caadditions.emerald_aiot": "Emerald AIOT",
+  "item.caadditions.amethyst_aiot": "Amethyst AIOT",
+  "item.caadditions.tigers_eye_aiot": "Tiger's Eye AIOT",
+  "item.caadditions.ruby_aiot": "Ruby AIOT",
+  "item.caadditions.ultimate_aiot": "Ultimate AIOT"
+}

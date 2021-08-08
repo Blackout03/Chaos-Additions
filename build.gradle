@@ -20,7 +20,7 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(8)
 minecraft {
     mappings channel: 'official', version: '1.16.5'
 
-    // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
+     accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
 
     runs {
         client {
@@ -28,7 +28,7 @@ minecraft {
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
             mods {
-                chaosawakensadditions {
+                caadditions {
                     source sourceSets.main
                 }
             }
@@ -38,7 +38,7 @@ minecraft {
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
             mods {
-                chaosawakensadditions {
+                caadditions {
                     source sourceSets.main
                 }
             }
@@ -47,9 +47,9 @@ minecraft {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
-            args '--mod', 'chaosawakensadditions', '--all', '--output', file('src/main/generated/'), '--existing', file('src/main/resources/')
+            args '--mod', 'caadditions', '--all', '--output', file('src/main/generated/'), '--existing', file('src/main/resources/')
             mods {
-                chaosawakensadditions {
+                caadditions {
                     source sourceSets.main
                 }
             }
