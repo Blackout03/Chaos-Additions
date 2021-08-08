@@ -4,9 +4,25 @@
   "tooltip.caadditions.default.tooltip_2": "Hold Shift and Right Click Grass to Hoe it!",
   "tooltip.caadditions.default.tooltip_3": "Right Click Grass to Path it!",
 
+  "item.caadditions.wooden_aiot": "Wooden AIOT",
+  "item.caadditions.stone_aiot": "Stone AIOT",
+  "item.caadditions.golden_aiot": "Golden AIOT",
+  "item.caadditions.iron_aiot": "Iron AIOT",
+  "item.caadditions.diamond_aiot": "Diamond AIOT",
+  "item.caadditions.netherite_aiot": "Netherite AIOT",
+  "item.caadditions.crystal_wood_aiot": "Crystal Wood AIOT",
+  "item.caadditions.kyanite_aiot": "Kyanite AIOT",
+  "item.caadditions.pink_tourmaline_aiot": "Pink Tourmaline AIOT",
+  "item.caadditions.cats_eye_aiot": "Cat's Eye AIOT",
+  "item.caadditions.copper_aiot": "Copper AIOT",
+  "item.caadditions.tin_aiot": "Tin AIOT",
+  "item.caadditions.silver_aiot": "Silver AIOT",
+  "item.caadditions.platinum_aiot": "Platinum AIOT",
   "item.caadditions.emerald_aiot": "Emerald AIOT",
   "item.caadditions.amethyst_aiot": "Amethyst AIOT",
   "item.caadditions.tigers_eye_aiot": "Tiger's Eye AIOT",
   "item.caadditions.ruby_aiot": "Ruby AIOT",
-  "item.caadditions.ultimate_aiot": "Ultimate AIOT"
+  "item.caadditions.ultimate_aiot": "Ultimate AIOT",
+
+  "item.caadditions.ruby_shield": "Ruby Shield"
 }
