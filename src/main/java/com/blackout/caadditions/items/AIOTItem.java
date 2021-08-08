@@ -117,7 +117,7 @@ public class AIOTItem extends ToolItem {
         if(Screen.hasShiftDown()) {
             list.add(new TranslationTextComponent("tooltip.caadditions.default.tooltip_1"));
             list.add(new TranslationTextComponent("tooltip.caadditions.default.tooltip_2"));
-            list.add(new TranslationTextComponent("tooltip.caadditions.default.tooltip_2"));
+            list.add(new TranslationTextComponent("tooltip.caadditions.default.tooltip_3"));
         } else {
             list.add(new TranslationTextComponent("tooltip.caadditions.default.tooltip"));
         }
