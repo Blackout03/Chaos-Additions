@@ -10,7 +10,6 @@ import net.minecraft.enchantment.EnchantmentData;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemTier;
-import net.minecraft.item.ShieldItem;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
@@ -35,7 +34,6 @@ public class CAAdditionsItems {
     public static final RegistryObject<AIOTItem> TIN_AIOT = ITEMS.register("tin_aiot", () -> new AIOTItem(ToolMaterials.TOOL_TIN, CAAdditionsConfig.COMMON.tinAIOTDamage.get() - 4, -2.4F, new Item.Properties().tab(CAItemGroups.equipmentItemGroup)));
     public static final RegistryObject<AIOTItem> SILVER_AIOT = ITEMS.register("silver_aiot", () -> new AIOTItem(ToolMaterials.TOOL_SILVER, CAAdditionsConfig.COMMON.silverAIOTDamage.get() - 5, -2.4F, new Item.Properties().tab(CAItemGroups.equipmentItemGroup)));
     public static final RegistryObject<AIOTItem> PLATINUM_AIOT = ITEMS.register("platinum_aiot", () -> new AIOTItem(ToolMaterials.TOOL_PLATINUM, CAAdditionsConfig.COMMON.platinumAIOTDamage.get() - 7, -2.4F, new Item.Properties().tab(CAItemGroups.equipmentItemGroup)));
-
     public static final RegistryObject<AIOTItem> EMERALD_AIOT = ITEMS.register("emerald_aiot", () -> new EnchantedAIOTItem(ToolMaterials.TOOL_EMERALD, CAAdditionsConfig.COMMON.emeraldAIOTDamage.get() - 7, -2.4F, new Item.Properties().tab(CAItemGroups.equipmentItemGroup), new EnchantmentData[] { new EnchantmentData(Enchantments.SILK_TOUCH, 1)}));
     public static final RegistryObject<AIOTItem> AMETHYST_AIOT = ITEMS.register("amethyst_aiot", () -> new AIOTItem(ToolMaterials.TOOL_AMETHYST, CAAdditionsConfig.COMMON.amethystAIOTDamage.get() - 12, -2.4F, new Item.Properties().tab(CAItemGroups.equipmentItemGroup)));
     public static final RegistryObject<AIOTItem> TIGERS_EYE_AIOT = ITEMS.register("tigers_eye_aiot", () -> new AIOTItem(ToolMaterials.TOOL_TIGERS_EYE, CAAdditionsConfig.COMMON.tigersEyeAIOTDamage.get() - 9, -2.4F, new Item.Properties().tab(CAItemGroups.equipmentItemGroup)));
@@ -43,5 +41,5 @@ public class CAAdditionsItems {
     public static final RegistryObject<AIOTItem> ULTIMATE_AIOT = ITEMS.register("ultimate_aiot", () -> new EnchantedAIOTItem(ToolMaterials.TOOL_ULTIMATE, CAAdditionsConfig.COMMON.ultimateAIOTDamage.get() - 37, -2.4F, new Item.Properties().tab(CAItemGroups.equipmentItemGroup),
             new EnchantmentData[] { new EnchantmentData(Enchantments.BLOCK_EFFICIENCY, 5), new EnchantmentData(Enchantments.BLOCK_FORTUNE, 5), new EnchantmentData(Enchantments.UNBREAKING, 2)}));
 
-    public static final RegistryObject<ShieldItem> RUBY_SHIELD = ITEMS.register("ruby_shield", () -> new ShieldItem(new Item.Properties().durability(756).tab(CAItemGroups.equipmentItemGroup)));
+//    public static final RegistryObject<ShieldItem> RUBY_SHIELD = ITEMS.register("ruby_shield", () -> new ShieldItem(new Item.Properties().durability(756).tab(CAItemGroups.equipmentItemGroup)));
 }

@@ -2,7 +2,7 @@ modLoader="javafml"
 loaderVersion="[36,)"
 issueTrackerURL="https://github.com/Blackout03/Chaos-Awakens-Additions/issues"
 displayURL=""
-license="All Rights Reserved. Code from before v0.9 is licensed GNU LGPL v2.1."
+license="All Rights Reserved."
 
 [[mods]]
 modId="caadditions"

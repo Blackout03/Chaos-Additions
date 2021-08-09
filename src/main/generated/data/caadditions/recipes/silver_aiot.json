@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#$",
+    "%^"
+  ],
+  "key": {
+    "#": {
+      "item": "chaosawakens:silver_pickaxe"
+    },
+    "$": {
+      "item": "chaosawakens:silver_axe"
+    },
+    "%": {
+      "item": "chaosawakens:silver_shovel"
+    },
+    "^": {
+      "item": "chaosawakens:silver_hoe"
+    }
+  },
+  "result": {
+    "item": "caadditions:silver_aiot"
+  }
+}

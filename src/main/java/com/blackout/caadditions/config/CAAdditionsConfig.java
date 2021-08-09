@@ -27,6 +27,8 @@ public class CAAdditionsConfig {
         public final ConfigValue<Integer> rubyAIOTDamage;
         public final ConfigValue<Integer> ultimateAIOTDamage;
 
+        public final ConfigValue<Boolean> showUpdateMessage;
+
         Common(ForgeConfigSpec.Builder builder) {
             builder.push("Attack Damage");
             builder.push("AIOT");
@@ -50,6 +52,9 @@ public class CAAdditionsConfig {
             rubyAIOTDamage = builder.define("Damage of the Ruby AIOT", 19);
             ultimateAIOTDamage = builder.define("Damage of the Ultimate AIOT", 39);
             builder.pop();
+            builder.pop();
+            builder.push("Update Checker");
+            showUpdateMessage = builder.comment("Send messages when there is a new update!").define("Show Update Messages", true);
             builder.pop();
         }
     }
