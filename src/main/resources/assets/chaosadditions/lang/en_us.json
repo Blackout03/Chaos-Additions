@@ -1,0 +1,28 @@
+{
+  "tooltip.chaosadditions.default.tooltip": "Press Shift to see More Information!",
+  "tooltip.chaosadditions.default.tooltip_1": "Hold Shift and Right Click Wood to Strip it!",
+  "tooltip.chaosadditions.default.tooltip_2": "Hold Shift and Right Click Grass to Hoe it!",
+  "tooltip.chaosadditions.default.tooltip_3": "Right Click Grass to Path it!",
+
+  "item.chaosadditions.wooden_aiot": "Wooden AIOT",
+  "item.chaosadditions.stone_aiot": "Stone AIOT",
+  "item.chaosadditions.golden_aiot": "Golden AIOT",
+  "item.chaosadditions.iron_aiot": "Iron AIOT",
+  "item.chaosadditions.diamond_aiot": "Diamond AIOT",
+  "item.chaosadditions.netherite_aiot": "Netherite AIOT",
+  "item.chaosadditions.crystal_wood_aiot": "Crystal Wood AIOT",
+  "item.chaosadditions.kyanite_aiot": "Kyanite AIOT",
+  "item.chaosadditions.pink_tourmaline_aiot": "Pink Tourmaline AIOT",
+  "item.chaosadditions.cats_eye_aiot": "Cat's Eye AIOT",
+  "item.chaosadditions.copper_aiot": "Copper AIOT",
+  "item.chaosadditions.tin_aiot": "Tin AIOT",
+  "item.chaosadditions.silver_aiot": "Silver AIOT",
+  "item.chaosadditions.platinum_aiot": "Platinum AIOT",
+  "item.chaosadditions.emerald_aiot": "Emerald AIOT",
+  "item.chaosadditions.amethyst_aiot": "Amethyst AIOT",
+  "item.chaosadditions.tigers_eye_aiot": "Tiger's Eye AIOT",
+  "item.chaosadditions.ruby_aiot": "Ruby AIOT",
+  "item.chaosadditions.ultimate_aiot": "Ultimate AIOT",
+
+  "item.chaosadditions.ruby_shield": "Ruby Shield"
+}

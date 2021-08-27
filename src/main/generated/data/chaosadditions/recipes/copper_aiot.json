@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "chaosawakens:copper_pickaxe"
+    },
+    {
+      "item": "chaosawakens:copper_axe"
+    },
+    {
+      "item": "chaosawakens:copper_shovel"
+    },
+    {
+      "item": "chaosawakens:copper_hoe"
+    }
+  ],
+  "result": {
+    "item": "chaosadditions:copper_aiot"
+  }
+}

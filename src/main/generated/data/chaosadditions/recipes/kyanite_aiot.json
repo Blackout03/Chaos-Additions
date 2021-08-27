@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "chaosawakens:kyanite_pickaxe"
+    },
+    {
+      "item": "chaosawakens:kyanite_axe"
+    },
+    {
+      "item": "chaosawakens:kyanite_shovel"
+    },
+    {
+      "item": "chaosawakens:kyanite_hoe"
+    }
+  ],
+  "result": {
+    "item": "chaosadditions:kyanite_aiot"
+  }
+}

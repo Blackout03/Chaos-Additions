@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "chaosawakens:ultimate_pickaxe"
+    },
+    {
+      "item": "chaosawakens:ultimate_axe"
+    },
+    {
+      "item": "chaosawakens:ultimate_shovel"
+    },
+    {
+      "item": "chaosawakens:ultimate_hoe"
+    }
+  ],
+  "result": {
+    "item": "chaosadditions:ultimate_aiot"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "chaosawakens:emerald_pickaxe"
+    },
+    {
+      "item": "chaosawakens:emerald_axe"
+    },
+    {
+      "item": "chaosawakens:emerald_shovel"
+    },
+    {
+      "item": "chaosawakens:emerald_hoe"
+    }
+  ],
+  "result": {
+    "item": "chaosadditions:emerald_aiot"
+  }
+}

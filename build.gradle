@@ -15,7 +15,7 @@ group = 'com.blackout'
 version = "${project.minecraft}-${project.modVersion}"
 archivesBaseName = project.modId
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(8)
+java.toolchain.languageVersion = JavaLanguageVersion.of 8
 
 minecraft {
     mappings channel: 'official', version: '1.16.5'
@@ -28,7 +28,7 @@ minecraft {
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
             mods {
-                caadditions {
+                chaosadditions {
                     source sourceSets.main
                 }
             }
@@ -38,7 +38,7 @@ minecraft {
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
             mods {
-                caadditions {
+                chaosadditions {
                     source sourceSets.main
                 }
             }
@@ -47,9 +47,9 @@ minecraft {
             workingDirectory project.file('run')
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
-            args '--mod', 'caadditions', '--all', '--output', file('src/main/generated/'), '--existing', file('src/main/resources/')
+            args '--mod', 'chaosadditions', '--all', '--output', file('src/main/generated/'), '--existing', file('src/main/resources/')
             mods {
-                caadditions {
+                chaosadditions {
                     source sourceSets.main
                 }
             }

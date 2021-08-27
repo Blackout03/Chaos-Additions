@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "chaosawakens:tigers_eye_pickaxe"
+    },
+    {
+      "item": "chaosawakens:tigers_eye_axe"
+    },
+    {
+      "item": "chaosawakens:tigers_eye_shovel"
+    },
+    {
+      "item": "chaosawakens:tigers_eye_hoe"
+    }
+  ],
+  "result": {
+    "item": "chaosadditions:tigers_eye_aiot"
+  }
+}

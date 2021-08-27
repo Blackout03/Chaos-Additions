@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "chaosawakens:silver_pickaxe"
+    },
+    {
+      "item": "chaosawakens:silver_axe"
+    },
+    {
+      "item": "chaosawakens:silver_shovel"
+    },
+    {
+      "item": "chaosawakens:silver_hoe"
+    }
+  ],
+  "result": {
+    "item": "chaosadditions:silver_aiot"
+  }
+}

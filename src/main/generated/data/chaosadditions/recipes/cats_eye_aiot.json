@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "chaosawakens:cats_eye_pickaxe"
+    },
+    {
+      "item": "chaosawakens:cats_eye_axe"
+    },
+    {
+      "item": "chaosawakens:cats_eye_shovel"
+    },
+    {
+      "item": "chaosawakens:cats_eye_hoe"
+    }
+  ],
+  "result": {
+    "item": "chaosadditions:cats_eye_aiot"
+  }
+}

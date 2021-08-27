@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "chaosawakens:tin_pickaxe"
+    },
+    {
+      "item": "chaosawakens:tin_axe"
+    },
+    {
+      "item": "chaosawakens:tin_shovel"
+    },
+    {
+      "item": "chaosawakens:tin_hoe"
+    }
+  ],
+  "result": {
+    "item": "chaosadditions:tin_aiot"
+  }
+}
