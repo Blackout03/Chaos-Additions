@@ -1,6 +1,6 @@
 package com.blackout.chaosadditions.items;
 
-import com.blackout.chaosadditions.api.IAutoEnchantable;
+import io.github.chaosawakens.api.IAutoEnchantable;
 import io.github.chaosawakens.common.config.CAConfig;
 import net.minecraft.enchantment.EnchantmentData;
 import net.minecraft.item.IItemTier;

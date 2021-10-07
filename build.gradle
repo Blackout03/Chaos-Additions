@@ -1,7 +1,6 @@
 buildscript {
     repositories {
         maven { url = 'https://maven.minecraftforge.net' }
-        jcenter()
         mavenCentral()
     }
     dependencies {
@@ -12,13 +11,13 @@ buildscript {
 apply plugin: 'net.minecraftforge.gradle'
 
 group = 'com.blackout'
-version = "${project.minecraft}-${project.modVersion}"
+version = "${project.minecraftVersion}-${project.modVersion}"
 archivesBaseName = project.modId
 
 java.toolchain.languageVersion = JavaLanguageVersion.of 8
 
 minecraft {
-    mappings channel: 'official', version: '1.16.5'
+    mappings channel: "official", version: "${project.minecraftVersion}"
 
      accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
 
@@ -62,9 +61,9 @@ sourceSets {
 }
 
 dependencies {
-    minecraft "net.minecraftforge:forge:${project.minecraft}-${project.forge}"
+    minecraft "net.minecraftforge:forge:${project.minecraftVersion}-${project.forgeVersion}"
 
-    implementation fg.deobf("curse.maven:chaosawakens-475414:${project.chaosawakens}")
+    implementation fg.deobf("io.github:ChaosAwakens:1.16.5-${project.chaosawakens}")
     implementation fg.deobf("software.bernie.geckolib:geckolib-forge-1.16.5:${project.geckolib}")
 
     implementation fg.deobf("mezz.jei:jei-1.16.5:${project.jei}")
@@ -82,6 +81,10 @@ repositories {
     maven {
         name = "ModMaven"
         url = "https://modmaven.dev"
+    }
+    maven {
+        name = "ChaosMaven"
+        url = "https://raw.github.com/ChaosAwakens/ChaosMaven/main"
     }
     maven {
         name = "CurseForge"

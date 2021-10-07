@@ -3,10 +3,10 @@ package com.blackout.chaosadditions;
 import com.blackout.chaosadditions.config.ChaosAdditionsConfig;
 import com.blackout.chaosadditions.data.ChaosAdditionsItemModelGenerator;
 import com.blackout.chaosadditions.data.ChaosAdditionsRecipeGenerator;
-import com.blackout.chaosadditions.events.CraftingEventSubscriber;
 import com.blackout.chaosadditions.events.LoginEventHandler;
 import com.blackout.chaosadditions.registry.ChaosAdditionsItems;
 import io.github.chaosawakens.ChaosAwakens;
+import io.github.chaosawakens.common.config.CAConfig;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -44,9 +44,8 @@ public class ChaosAdditions {
         ChaosAdditionsItems.ITEMS.register(eventBus);
 
         MinecraftForge.EVENT_BUS.register(new LoginEventHandler());
-        if (ChaosAdditionsConfig.COMMON.showUpdateMessage.get())
+        if (CAConfig.COMMON.showUpdateMessage.get())
             UpdateHandler.init();
-        MinecraftForge.EVENT_BUS.addListener(CraftingEventSubscriber::onItemCraftedEvent);
         MinecraftForge.EVENT_BUS.register(this);
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ChaosAdditionsConfig.COMMON_SPEC);
