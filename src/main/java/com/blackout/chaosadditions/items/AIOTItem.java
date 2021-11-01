@@ -9,6 +9,7 @@ import net.minecraft.item.*;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
 import net.minecraftforge.common.ToolType;
@@ -52,11 +53,11 @@ public class AIOTItem extends ToolItem {
     public void appendHoverText(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
         super.appendHoverText(itemstack, world, list, flag);
         if(Screen.hasShiftDown()) {
-            list.add(new TranslationTextComponent("tooltip.chaosadditions.default.tooltip_1"));
-            list.add(new TranslationTextComponent("tooltip.chaosadditions.default.tooltip_2"));
-            list.add(new TranslationTextComponent("tooltip.chaosadditions.default.tooltip_3"));
+            list.add(new TranslationTextComponent("tooltip.chaosadditions.aiot_1").withStyle(TextFormatting.AQUA));
+            list.add(new TranslationTextComponent("tooltip.chaosadditions.aiot_2").withStyle(TextFormatting.AQUA));
+            list.add(new TranslationTextComponent("tooltip.chaosadditions.aiot_3").withStyle(TextFormatting.AQUA));
         } else {
-            list.add(new TranslationTextComponent("tooltip.chaosadditions.default.tooltip"));
+            list.add(new TranslationTextComponent("tooltip.chaosadditions.default").withStyle(TextFormatting.AQUA));
         }
     }
 }

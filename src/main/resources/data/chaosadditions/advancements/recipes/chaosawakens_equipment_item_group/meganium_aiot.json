@@ -1,0 +1,65 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "chaosadditions:meganium_aiot"
+    ]
+  },
+  "criteria": {
+    "has_tool1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "chaosawakens:meganium_pickaxe"
+          }
+        ]
+      }
+    },
+    "has_tool2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "chaosawakens:meganium_axe"
+          }
+        ]
+      }
+    },
+    "has_tool3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "chaosawakens:meganium_shovel"
+          }
+        ]
+      }
+    },
+    "has_too4": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "chaosawakens:meganium_hoe"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "chaosadditions:meganium_aiot"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_tool1",
+      "has_tool2",
+      "has_tool3",
+      "has_too4",
+      "has_the_recipe"
+    ]
+  ]
+}

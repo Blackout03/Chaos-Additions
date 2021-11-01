@@ -36,7 +36,7 @@
         ]
       }
     },
-    "has_too4": {
+    "has_tool4": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -58,7 +58,7 @@
       "has_tool1",
       "has_tool2",
       "has_tool3",
-      "has_too4",
+      "has_tool4",
       "has_the_recipe"
     ]
   ]

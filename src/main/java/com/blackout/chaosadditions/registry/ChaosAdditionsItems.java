@@ -2,14 +2,16 @@ package com.blackout.chaosadditions.registry;
 
 import com.blackout.chaosadditions.ChaosAdditions;
 import com.blackout.chaosadditions.config.ChaosAdditionsConfig;
-import com.blackout.chaosadditions.items.AIOTItem;
-import com.blackout.chaosadditions.items.EnchantedAIOTItem;
+import com.blackout.chaosadditions.enums.ChaosAdditionsArmorMaterial;
+import com.blackout.chaosadditions.enums.ChaosAdditionsItemTier;
+import com.blackout.chaosadditions.items.*;
 import io.github.chaosawakens.common.enums.CAItemTier;
 import io.github.chaosawakens.common.registry.CAItemGroups;
 import net.minecraft.enchantment.EnchantmentData;
 import net.minecraft.enchantment.Enchantments;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemTier;
+import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.item.*;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
@@ -40,4 +42,18 @@ public class ChaosAdditionsItems {
     public static final RegistryObject<AIOTItem> RUBY_AIOT = ITEMS.register("ruby_aiot", () -> new AIOTItem(CAItemTier.TOOL_RUBY, ChaosAdditionsConfig.COMMON.rubyAIOTDamage.get() - 17, -2.4F, new Item.Properties().tab(CAItemGroups.equipmentItemGroup)));
     public static final RegistryObject<AIOTItem> ULTIMATE_AIOT = ITEMS.register("ultimate_aiot", () -> new EnchantedAIOTItem(CAItemTier.TOOL_ULTIMATE, ChaosAdditionsConfig.COMMON.ultimateAIOTDamage.get() - 37, -2.4F, new Item.Properties().tab(CAItemGroups.equipmentItemGroup),
             new EnchantmentData[] { new EnchantmentData(Enchantments.BLOCK_EFFICIENCY, 5), new EnchantmentData(Enchantments.BLOCK_FORTUNE, 5), new EnchantmentData(Enchantments.UNBREAKING, 2)}));
+
+    public static final RegistryObject<Item> SAPPHIRE = ITEMS.register("sapphire",() -> new Item(new Item.Properties().tab(CAItemGroups.itemsItemGroup)));
+
+    public static final RegistryObject<SwordItem> SAPPHIRE_SWORD = ITEMS.register("sapphire_sword", () -> new SapphireSwordItem(ChaosAdditionsItemTier.TOOL_SAPPHIRE, ChaosAdditionsConfig.COMMON.sapphireSwordDamage.get() - 15, -2.4F, new Item.Properties().tab(CAItemGroups.equipmentItemGroup)));
+    public static final RegistryObject<PickaxeItem> SAPPHIRE_PICKAXE = ITEMS.register("sapphire_pickaxe", () -> new SapphirePickaxeItem(ChaosAdditionsItemTier.TOOL_SAPPHIRE, ChaosAdditionsConfig.COMMON.sapphirePickaxeDamage.get() - 15, -2.8F, new Item.Properties().tab(CAItemGroups.equipmentItemGroup)));
+    public static final RegistryObject<AxeItem> SAPPHIRE_AXE = ITEMS.register("sapphire_axe", () -> new SapphireAxeItem(ChaosAdditionsItemTier.TOOL_SAPPHIRE, ChaosAdditionsConfig.COMMON.sapphireAxeDamage.get() - 15, -3F, new Item.Properties().tab(CAItemGroups.equipmentItemGroup)));
+    public static final RegistryObject<ShovelItem> SAPPHIRE_SHOVEL = ITEMS.register("sapphire_shovel", () -> new SapphireShovelItem(ChaosAdditionsItemTier.TOOL_SAPPHIRE, ChaosAdditionsConfig.COMMON.sapphireShovelDamage.get() - 15, -3F, new Item.Properties().tab(CAItemGroups.equipmentItemGroup)));
+    public static final RegistryObject<HoeItem> SAPPHIRE_HOE = ITEMS.register("sapphire_hoe", () -> new SapphireHoeItem(ChaosAdditionsItemTier.TOOL_SAPPHIRE, ChaosAdditionsConfig.COMMON.sapphireHoeDamage.get() - 15, 0F, new Item.Properties().tab(CAItemGroups.equipmentItemGroup)));
+    public static final RegistryObject<AIOTItem> SAPPHIRE_AIOT = ITEMS.register("sapphire_aiot", () -> new SapphireAIOTItem(ChaosAdditionsItemTier.TOOL_SAPPHIRE, ChaosAdditionsConfig.COMMON.sapphireAIOTDamage.get() - 15, -2.4F, new Item.Properties().tab(CAItemGroups.equipmentItemGroup)));
+
+    public static final RegistryObject<ArmorItem> SAPPHIRE_HELMET = ITEMS.register("sapphire_helmet", () -> new SapphireArmorItem(ChaosAdditionsArmorMaterial.SAPPHIRE, EquipmentSlotType.HEAD, new Item.Properties().tab(CAItemGroups.equipmentItemGroup)));
+    public static final RegistryObject<ArmorItem> SAPPHIRE_CHESTPLATE = ITEMS.register("sapphire_chestplate", () -> new SapphireArmorItem(ChaosAdditionsArmorMaterial.SAPPHIRE, EquipmentSlotType.CHEST, new Item.Properties().tab(CAItemGroups.equipmentItemGroup)));
+    public static final RegistryObject<ArmorItem> SAPPHIRE_LEGGINGS = ITEMS.register("sapphire_leggings", () -> new SapphireArmorItem(ChaosAdditionsArmorMaterial.SAPPHIRE, EquipmentSlotType.LEGS, new Item.Properties().tab(CAItemGroups.equipmentItemGroup)));
+    public static final RegistryObject<ArmorItem> SAPPHIRE_BOOTS = ITEMS.register("sapphire_boots", () -> new SapphireArmorItem(ChaosAdditionsArmorMaterial.SAPPHIRE, EquipmentSlotType.FEET, new Item.Properties().tab(CAItemGroups.equipmentItemGroup)));
 }

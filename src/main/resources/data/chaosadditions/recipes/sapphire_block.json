@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "chaosadditions:sapphire_block"
+    }
+  ],
+  "result": {
+    "item": "chaosadditions:sapphire",
+    "count": 9
+  }
+}

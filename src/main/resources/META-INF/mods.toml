@@ -29,7 +29,7 @@ side="BOTH"
 [[dependencies.chaosadditions]]
 modId="chaosawakens"
 mandatory=true
-versionRange="[0.8,)"
+versionRange="[0.9,)"
 ordering="NONE"
 side="BOTH"
 

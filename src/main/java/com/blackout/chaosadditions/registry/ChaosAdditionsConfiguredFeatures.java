@@ -1,0 +1,29 @@
+package com.blackout.chaosadditions.registry;
+
+import com.blackout.chaosadditions.world.placement.OceanBedPlacement;
+import io.github.chaosawakens.api.FeatureWrapper;
+import io.github.chaosawakens.common.events.CommonSetupEvent;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.feature.template.BlockMatchRuleTest;
+import net.minecraft.world.gen.feature.template.RuleTest;
+import net.minecraft.world.gen.placement.DepthAverageConfig;
+
+public class ChaosAdditionsConfiguredFeatures {
+
+    public static final ConfiguredFeature<?, ?> ORE_SAPPHIRE = register("ore_sapphire", Feature.ORE.configured(new OreFeatureConfig(RuleTests.BASE_OCEAN_FLOOR, States.SAPPHIRE_ORE, 4)).decorated(OceanBedPlacement.DEPTH_AVERAGE.configured(new DepthAverageConfig(30, 15))).squared().count(5));
+
+    private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String key, ConfiguredFeature<FC, ?> configuredFeature) {
+        CommonSetupEvent.configFeatures.add( new FeatureWrapper(key, configuredFeature));
+        return configuredFeature;
+    }
+
+    public static final class States {
+        private static final BlockState SAPPHIRE_ORE = ChaosAdditionsBlocks.SAPPHIRE_ORE.get().defaultBlockState();
+    }
+
+    public static final class RuleTests {
+        public static final RuleTest BASE_OCEAN_FLOOR = new BlockMatchRuleTest(Blocks.GRAVEL);
+    }
+}

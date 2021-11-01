@@ -1,0 +1,13 @@
+{
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:chests/shipwreck_treasure"
+    }
+  ],
+  "itemChance": 0.125,
+  "itemCount": 1,
+  "extraItemCount": 1,
+  "item": "chaosadditions:sapphire",
+  "type": "chaosadditions:sapphire_treasure"
+}

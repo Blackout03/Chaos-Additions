@@ -7,7 +7,7 @@ import java.net.URL;
 import java.util.Scanner;
 
 public class UpdateHandler {
-    private static String currentVersion = ChaosAdditions.VERSION;
+    private static final String currentVersion = ChaosAdditions.VERSION;
 
     private static String newestVersion;
 
@@ -21,7 +21,7 @@ public class UpdateHandler {
             if (!newestVersion.equalsIgnoreCase(currentVersion))
                 if (!newestVersion.equalsIgnoreCase(currentVersion)) {
                     show = true;
-                    updateStatus = TextFormatting.WHITE + "Version " + TextFormatting.GOLD + newestVersion + TextFormatting.WHITE + " of " + TextFormatting.GOLD + TextFormatting.BOLD + ChaosAdditions.MODNAME + TextFormatting.WHITE + " is now available from " + TextFormatting.GOLD + "https://chaosawakens.github.io/addons.html";
+                    updateStatus = TextFormatting.WHITE + "Version " + TextFormatting.GOLD + newestVersion + TextFormatting.WHITE + " of " + TextFormatting.GOLD + TextFormatting.BOLD + ChaosAdditions.MODNAME + TextFormatting.WHITE + " is now available from " + TextFormatting.GOLD + "https://blackout03.github.io/mods.html";
                 }
         } else {
             show = false;

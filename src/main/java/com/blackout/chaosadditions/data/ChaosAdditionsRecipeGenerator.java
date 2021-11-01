@@ -37,10 +37,12 @@ public class ChaosAdditionsRecipeGenerator extends RecipeProvider {
 		recipeAIOT(recipeConsumer, ChaosAdditionsItems.TIGERS_EYE_AIOT.get(), CAItems.TIGERS_EYE_PICKAXE.get(), CAItems.TIGERS_EYE_AXE.get(), CAItems.TIGERS_EYE_SHOVEL.get(), CAItems.TIGERS_EYE_HOE.get());
 		recipeAIOT(recipeConsumer, ChaosAdditionsItems.RUBY_AIOT.get(), CAItems.RUBY_PICKAXE.get(), CAItems.RUBY_AXE.get(), CAItems.RUBY_SHOVEL.get(), CAItems.RUBY_HOE.get());
 		recipeAIOT(recipeConsumer, ChaosAdditionsItems.ULTIMATE_AIOT.get(), CAItems.ULTIMATE_PICKAXE.get(), CAItems.ULTIMATE_AXE.get(), CAItems.ULTIMATE_SHOVEL.get(), CAItems.ULTIMATE_HOE.get());
+
+		recipeAIOT(recipeConsumer, ChaosAdditionsItems.SAPPHIRE_AIOT.get(), ChaosAdditionsItems.SAPPHIRE_PICKAXE.get(), ChaosAdditionsItems.SAPPHIRE_AXE.get(), ChaosAdditionsItems.SAPPHIRE_SHOVEL.get(), ChaosAdditionsItems.SAPPHIRE_HOE.get());
 	}
 
 	private static void recipeAIOT(Consumer<IFinishedRecipe> recipeConsumer, IItemProvider output, IItemProvider input1, IItemProvider input2, IItemProvider input3, IItemProvider input4) {
-		ShapelessRecipeBuilder.shapeless(output).requires(input1).requires(input2).requires(input3).requires(input4).unlockedBy("has_tool1", has(input1)).unlockedBy("has_tool2", has(input2)).unlockedBy("has_tool3", has(input3)).unlockedBy("has_too4", has(input4)).save(recipeConsumer);
+		ShapelessRecipeBuilder.shapeless(output).requires(input1).requires(input2).requires(input3).requires(input4).unlockedBy("has_tool1", has(input1)).unlockedBy("has_tool2", has(input2)).unlockedBy("has_tool3", has(input3)).unlockedBy("has_tool4", has(input4)).save(recipeConsumer);
 		ChaosAdditions.LOGGER.info(output.asItem().getRegistryName());
 	}
 }

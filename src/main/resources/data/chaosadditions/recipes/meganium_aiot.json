@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "purechaos:meganium_pickaxe"
+    },
+    {
+      "item": "purechaos:meganium_axe"
+    },
+    {
+      "item": "purechaos:meganium_shovel"
+    },
+    {
+      "item": "purechaos:meganium_hoe"
+    }
+  ],
+  "result": {
+    "item": "chaosadditions:meganium_aiot"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "purechaos"
+    }
+  ]
+}

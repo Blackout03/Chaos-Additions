@@ -26,6 +26,14 @@ public class ChaosAdditionsConfig {
         public final ConfigValue<Integer> tigersEyeAIOTDamage;
         public final ConfigValue<Integer> rubyAIOTDamage;
         public final ConfigValue<Integer> ultimateAIOTDamage;
+        public final ConfigValue<Integer> sapphireAIOTDamage;
+        public final ConfigValue<Integer> meganiumAIOTDamage;
+
+        public final ConfigValue<Integer> sapphireSwordDamage;
+        public final ConfigValue<Integer> sapphirePickaxeDamage;
+        public final ConfigValue<Integer> sapphireAxeDamage;
+        public final ConfigValue<Integer> sapphireShovelDamage;
+        public final ConfigValue<Integer> sapphireHoeDamage;
 
         Common(ForgeConfigSpec.Builder builder) {
             builder.push("Attack Damage");
@@ -49,6 +57,15 @@ public class ChaosAdditionsConfig {
             tigersEyeAIOTDamage = builder.define("Damage of the Tiger's Eye AIOT", 14);
             rubyAIOTDamage = builder.define("Damage of the Ruby AIOT", 19);
             ultimateAIOTDamage = builder.define("Damage of the Ultimate AIOT", 39);
+            sapphireAIOTDamage = builder.define("Damage of the Sapphire AIOT", 11);
+            meganiumAIOTDamage = builder.define("Damage of the Meganium AIOT", 49);
+            builder.pop();
+            builder.push("Sapphire Weapons/Tools");
+            sapphireSwordDamage = builder.define("Damage of the Sapphire Sword", 12);
+            sapphirePickaxeDamage = builder.define("Damage of the Sapphire Pickaxe", 10);
+            sapphireAxeDamage = builder.define("Damage of the Sapphire Axe", 14);
+            sapphireShovelDamage = builder.define("Damage of the Sapphire Shovel", 11);
+            sapphireHoeDamage = builder.define("Damage of the Sapphire Hoe", 1);
             builder.pop();
             builder.pop();
         }

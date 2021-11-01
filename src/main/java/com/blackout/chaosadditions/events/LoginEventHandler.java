@@ -22,10 +22,4 @@ public class LoginEventHandler {
         ChaosAdditions.LOGGER.debug(UpdateHandler.updateStatus);
         ChaosAdditions.LOGGER.debug(UpdateHandler.show);
     }
-
-    @OnlyIn(Dist.CLIENT)
-    public void sendChatMessage(String text, PlayerEntity player) {
-        TranslationTextComponent component2 = new TranslationTextComponent(I18n.get(text, new Object[0]));
-        player.sendMessage(component2, player.getUUID());
-    }
 }

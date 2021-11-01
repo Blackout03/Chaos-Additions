@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "chaosadditions:sapphire_pickaxe"
+    },
+    {
+      "item": "chaosadditions:sapphire_axe"
+    },
+    {
+      "item": "chaosadditions:sapphire_shovel"
+    },
+    {
+      "item": "chaosadditions:sapphire_hoe"
+    }
+  ],
+  "result": {
+    "item": "chaosadditions:sapphire_aiot"
+  }
+}

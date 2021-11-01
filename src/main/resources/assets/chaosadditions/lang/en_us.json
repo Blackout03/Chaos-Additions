@@ -1,9 +1,4 @@
 {
-  "tooltip.chaosadditions.default.tooltip": "Press Shift to see More Information!",
-  "tooltip.chaosadditions.default.tooltip_1": "Hold Shift and Right Click Wood to Strip it!",
-  "tooltip.chaosadditions.default.tooltip_2": "Hold Shift and Right Click Grass to Hoe it!",
-  "tooltip.chaosadditions.default.tooltip_3": "Right Click Grass to Path it!",
-
   "item.chaosadditions.wooden_aiot": "Wooden AIOT",
   "item.chaosadditions.stone_aiot": "Stone AIOT",
   "item.chaosadditions.golden_aiot": "Golden AIOT",
@@ -23,6 +18,23 @@
   "item.chaosadditions.tigers_eye_aiot": "Tiger's Eye AIOT",
   "item.chaosadditions.ruby_aiot": "Ruby AIOT",
   "item.chaosadditions.ultimate_aiot": "Ultimate AIOT",
+  "item.chaosadditions.sapphire_aiot": "Sapphire AIOT",
+  "item.chaosadditions.meganium_aiot": "Meganium AIOT",
+
+  "block.chaosadditions.sapphire_block": "Sapphire Block",
+  "block.chaosadditions.sapphire_ore": "Sapphire Ore",
+  "item.chaosadditions.sapphire": "Sapphire",
+
+  "item.chaosadditions.sapphire_sword": "Sapphire Sword",
+  "item.chaosadditions.sapphire_pickaxe": "Sapphire Pickaxe",
+  "item.chaosadditions.sapphire_axe": "Sapphire Axe",
+  "item.chaosadditions.sapphire_shovel": "Sapphire Shovel",
+  "item.chaosadditions.sapphire_hoe": "Sapphire Hoe",
+  "item.chaosadditions.sapphire_helmet": "Sapphire Helmet",
+  "item.chaosadditions.sapphire_chestplate": "Sapphire Chestplate",
+  "item.chaosadditions.sapphire_leggings": "Sapphire Leggings",
+  "item.chaosadditions.sapphire_boots": "Sapphire Boots",
+
 
   "item.chaosadditions.ruby_shield": "Ruby Shield"
 }
