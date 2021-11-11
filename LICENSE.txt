@@ -4,4 +4,4 @@ Everything we have made is All Rights Reserved, including code, models, textures
 
 All code is ARR! No permission is given to use any of it. All versions are licensed as All Rights Reserved.
 
-You are allowed to use the mod in mod packs or servers, regardless if they are public or not. However, linking back to either https://github.com/Blackout03/Chaos-Additions or https://discord.com/invite/5uMtag9 would be highly appreciated if possible.
+You are allowed to use the mod in mod packs or servers, regardless if they are public or not. However, linking back to either https://blackout03.github.io/mods/chaos-additions.html, https://github.com/Blackout03/Chaos-Additions or https://discord.com/invite/5uMtag9 would be highly appreciated if possible.
