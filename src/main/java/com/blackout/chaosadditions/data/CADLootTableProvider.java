@@ -16,15 +16,15 @@ import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
-public class ChaosAdditionsLootTableProvider extends LootTableProvider {
-    public ChaosAdditionsLootTableProvider(DataGenerator dataGeneratorIn)
+public class CADLootTableProvider extends LootTableProvider {
+    public CADLootTableProvider(DataGenerator dataGeneratorIn)
     {
         super(dataGeneratorIn);
     }
 
     @Override
     protected List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, LootTable.Builder>>>, LootParameterSet>> getTables() {
-        return ImmutableList.of(Pair.of(ChaosAdditionsBlockLootTables::new, LootParameterSets.BLOCK));
+        return ImmutableList.of(Pair.of(CADBlockLootTables::new, LootParameterSets.BLOCK));
     }
 
     @Override

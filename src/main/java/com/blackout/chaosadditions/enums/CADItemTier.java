@@ -1,14 +1,14 @@
 package com.blackout.chaosadditions.enums;
 
-import com.blackout.chaosadditions.registry.ChaosAdditionsItems;
+import com.blackout.chaosadditions.registry.CADItems;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.crafting.Ingredient;
 
 import java.util.function.Supplier;
 
-public enum ChaosAdditionsItemTier implements IItemTier {
+public enum CADItemTier implements IItemTier {
     // Harvest level, Max uses, Efficiency, Damage, Enchantability
-    TOOL_SAPPHIRE(4, 2200, 9, 14, 20, () -> Ingredient.of(ChaosAdditionsItems.SAPPHIRE.get())),
+    TOOL_SAPPHIRE(4, 2200, 9, 14, 20, () -> Ingredient.of(CADItems.SAPPHIRE.get())),
     TOOL_MEGANIUM(6, 1741, 8, 46, 56, null);
 
     private final int harvestLevel;
@@ -18,7 +18,7 @@ public enum ChaosAdditionsItemTier implements IItemTier {
     private final int enchantability;
     private final Supplier<Ingredient> repairMaterial;
 
-    ChaosAdditionsItemTier(int harvestLevel, int maxUses, float efficiency, float damage, int enchantability, Supplier<Ingredient> repairMaterial) {
+    CADItemTier(int harvestLevel, int maxUses, float efficiency, float damage, int enchantability, Supplier<Ingredient> repairMaterial) {
         this.harvestLevel = harvestLevel;
         this.maxUses = maxUses;
         this.efficiency = efficiency;

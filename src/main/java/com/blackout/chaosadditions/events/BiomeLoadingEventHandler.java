@@ -1,6 +1,6 @@
 package com.blackout.chaosadditions.events;
 
-import com.blackout.chaosadditions.registry.ChaosAdditionsConfiguredFeatures;
+import com.blackout.chaosadditions.registry.CADConfiguredFeatures;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
@@ -32,7 +32,7 @@ public class BiomeLoadingEventHandler {
         }
 
         private static void addOceanOres(BiomeGenerationSettingsBuilder gen) {
-            gen.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, ChaosAdditionsConfiguredFeatures.ORE_SAPPHIRE);
+            gen.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, CADConfiguredFeatures.ORE_SAPPHIRE);
         }
     }
 }

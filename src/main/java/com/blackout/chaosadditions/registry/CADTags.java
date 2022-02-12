@@ -5,7 +5,8 @@ import net.minecraft.item.Item;
 import net.minecraft.tags.ITag;
 import net.minecraft.tags.ItemTags;
 
-public class ChaosAdditionsTags {
-    //Item tags
-    public static final ITag<Item> CUSTOM_TOOLTIPS = ItemTags.bind(ChaosAdditions.MODID + ":custom_tooltips");
+public class CADTags {
+    public static class Items {
+        public static final ITag<Item> CUSTOM_TOOLTIPS = ItemTags.bind(ChaosAdditions.MODID + ":custom_tooltips");
+    }
 }

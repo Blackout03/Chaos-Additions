@@ -1,6 +1,6 @@
 package com.blackout.chaosadditions.items;
 
-import com.blackout.chaosadditions.registry.ChaosAdditionsItems;
+import com.blackout.chaosadditions.registry.CADItems;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
@@ -20,10 +20,10 @@ public class SapphireArmorItem extends ArmorItem {
     @Override
     public void onArmorTick(@Nonnull ItemStack stack, World world, PlayerEntity player) {
         if (player.isUnderWater()) {
-            if (player.getItemBySlot(EquipmentSlotType.HEAD).sameItem(ChaosAdditionsItems.SAPPHIRE_HELMET.get().getDefaultInstance()) &&
-                    player.getItemBySlot(EquipmentSlotType.CHEST).sameItem(ChaosAdditionsItems.SAPPHIRE_CHESTPLATE.get().getDefaultInstance()) &&
-                    player.getItemBySlot(EquipmentSlotType.LEGS).sameItem(ChaosAdditionsItems.SAPPHIRE_LEGGINGS.get().getDefaultInstance()) &&
-                    player.getItemBySlot(EquipmentSlotType.FEET).sameItem(ChaosAdditionsItems.SAPPHIRE_BOOTS.get().getDefaultInstance())) {
+            if (player.getItemBySlot(EquipmentSlotType.HEAD).sameItem(CADItems.SAPPHIRE_HELMET.get().getDefaultInstance()) &&
+                    player.getItemBySlot(EquipmentSlotType.CHEST).sameItem(CADItems.SAPPHIRE_CHESTPLATE.get().getDefaultInstance()) &&
+                    player.getItemBySlot(EquipmentSlotType.LEGS).sameItem(CADItems.SAPPHIRE_LEGGINGS.get().getDefaultInstance()) &&
+                    player.getItemBySlot(EquipmentSlotType.FEET).sameItem(CADItems.SAPPHIRE_BOOTS.get().getDefaultInstance())) {
 
                 player.addEffect(new EffectInstance(Effects.WATER_BREATHING, 100, 0, false, false, false));
                 player.addEffect(new EffectInstance(Effects.DOLPHINS_GRACE, 100, 0, false, false, false));

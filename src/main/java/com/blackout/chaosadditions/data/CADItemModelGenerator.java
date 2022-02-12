@@ -1,11 +1,9 @@
 package com.blackout.chaosadditions.data;
 
 import com.blackout.chaosadditions.ChaosAdditions;
-import com.blackout.chaosadditions.registry.ChaosAdditionsBlocks;
-import com.blackout.chaosadditions.registry.ChaosAdditionsItems;
-import com.blackout.chaosadditions.registry.ChaosAdditionsItemsPureChaos;
-import io.github.chaosawakens.ChaosAwakens;
-import io.github.chaosawakens.common.registry.CABlocks;
+import com.blackout.chaosadditions.registry.CADBlocks;
+import com.blackout.chaosadditions.registry.CADItems;
+import com.blackout.chaosadditions.registry.CADItemsPureChaos;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
@@ -20,17 +18,17 @@ import net.minecraftforge.fml.RegistryObject;
 import javax.annotation.Nonnull;
 import java.util.Collection;
 
-public class ChaosAdditionsItemModelGenerator extends ItemModelProvider {
+public class CADItemModelGenerator extends ItemModelProvider {
 
-	public ChaosAdditionsItemModelGenerator(DataGenerator generator, ExistingFileHelper existingFileHelper) {
+	public CADItemModelGenerator(DataGenerator generator, ExistingFileHelper existingFileHelper) {
 		super(generator, ChaosAdditions.MODID, existingFileHelper);
 	}
 
 	@Override
 	protected void registerModels() {
-		generate(ChaosAdditionsItems.ITEMS.getEntries());
-		generate(ChaosAdditionsItemsPureChaos.ITEMS.getEntries());
-		generateBlockItems(ChaosAdditionsBlocks.ITEM_BLOCKS.getEntries());
+		generate(CADItems.ITEMS.getEntries());
+		generate(CADItemsPureChaos.ITEMS.getEntries());
+		generateBlockItems(CADBlocks.ITEM_BLOCKS.getEntries());
 	}
 
 	@Nonnull

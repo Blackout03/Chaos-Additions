@@ -1,17 +1,17 @@
 package com.blackout.chaosadditions;
 
-import com.blackout.chaosadditions.config.ChaosAdditionsConfig;
-import com.blackout.chaosadditions.data.ChaosAdditionsItemModelGenerator;
-import com.blackout.chaosadditions.data.ChaosAdditionsLootProvider;
-import com.blackout.chaosadditions.data.ChaosAdditionsLootTableProvider;
-import com.blackout.chaosadditions.data.ChaosAdditionsRecipeGenerator;
+import com.blackout.chaosadditions.config.CADConfig;
+import com.blackout.chaosadditions.data.CADItemModelGenerator;
+import com.blackout.chaosadditions.data.CADLootProvider;
+import com.blackout.chaosadditions.data.CADLootTableProvider;
+import com.blackout.chaosadditions.data.CADRecipeGenerator;
 import com.blackout.chaosadditions.events.BiomeLoadingEventHandler;
 import com.blackout.chaosadditions.events.LoginEventHandler;
 import com.blackout.chaosadditions.events.ToolTipEventSubscriber;
-import com.blackout.chaosadditions.registry.ChaosAdditionsBlocks;
-import com.blackout.chaosadditions.registry.ChaosAdditionsGlobalLootModifier;
-import com.blackout.chaosadditions.registry.ChaosAdditionsItems;
-import com.blackout.chaosadditions.registry.ChaosAdditionsItemsPureChaos;
+import com.blackout.chaosadditions.registry.CADBlocks;
+import com.blackout.chaosadditions.registry.CADGlobalLootModifier;
+import com.blackout.chaosadditions.registry.CADItems;
+import com.blackout.chaosadditions.registry.CADItemsPureChaos;
 import io.github.chaosawakens.ChaosAwakens;
 import io.github.chaosawakens.common.config.CAConfig;
 import net.minecraft.data.DataGenerator;
@@ -37,7 +37,7 @@ public class ChaosAdditions {
 
     public static final String MODID = "chaosadditions";
     public static final String MODNAME = "Chaos Additions";
-    public static final String VERSION = "0.3";
+    public static final String VERSION = "0.4";
 
     public static final Logger LOGGER = LogManager.getLogger();
 
@@ -56,18 +56,18 @@ public class ChaosAdditions {
             MinecraftForge.EVENT_BUS.addListener(ToolTipEventSubscriber::onToolTipEvent);
         }
 
-        ChaosAdditionsBlocks.ITEM_BLOCKS.register(eventBus);
-        ChaosAdditionsBlocks.BLOCKS.register(eventBus);
-        ChaosAdditionsItems.ITEMS.register(eventBus);
-        if (ModList.get().isLoaded("purechaos")) ChaosAdditionsItemsPureChaos.ITEMS.register(eventBus);
-        ChaosAdditionsGlobalLootModifier.LOOT_MODIFIER_SERIALIZERS.register(eventBus);
+        CADBlocks.ITEM_BLOCKS.register(eventBus);
+        CADBlocks.BLOCKS.register(eventBus);
+        CADItems.ITEMS.register(eventBus);
+        if (ModList.get().isLoaded("purechaos")) CADItemsPureChaos.ITEMS.register(eventBus);
+        CADGlobalLootModifier.LOOT_MODIFIER_SERIALIZERS.register(eventBus);
 
         MinecraftForge.EVENT_BUS.register(new LoginEventHandler());
         if (CAConfig.COMMON.showUpdateMessage.get()) UpdateHandler.init();
         MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, BiomeLoadingEventHandler::onBiomeLoadingEvent);
         MinecraftForge.EVENT_BUS.register(this);
 
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ChaosAdditionsConfig.COMMON_SPEC);
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, CADConfig.COMMON_SPEC);
     }
 
     private void gatherData(final GatherDataEvent event) {
@@ -75,10 +75,10 @@ public class ChaosAdditions {
         final ExistingFileHelper existing = event.getExistingFileHelper();
 
         if (event.includeServer()) {
-            dataGenerator.addProvider(new ChaosAdditionsItemModelGenerator(dataGenerator, existing));
-            dataGenerator.addProvider(new ChaosAdditionsRecipeGenerator(dataGenerator));
-            dataGenerator.addProvider(new ChaosAdditionsLootTableProvider(dataGenerator));
-            dataGenerator.addProvider(new ChaosAdditionsLootProvider(dataGenerator));
+            dataGenerator.addProvider(new CADItemModelGenerator(dataGenerator, existing));
+            dataGenerator.addProvider(new CADRecipeGenerator(dataGenerator));
+            dataGenerator.addProvider(new CADLootTableProvider(dataGenerator));
+            dataGenerator.addProvider(new CADLootProvider(dataGenerator));
         }
     }
 }

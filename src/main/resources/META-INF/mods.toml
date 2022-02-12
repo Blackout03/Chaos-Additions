@@ -1,16 +1,16 @@
 modLoader="javafml"
 loaderVersion="[36,)"
 issueTrackerURL="https://github.com/Blackout03/Chaos-Additions/issues"
-displayURL="https://chaosawakens.github.io/addons.html"
+displayURL="https://blackout03.github.io/mods/chaos-additions.html"
 license="All Rights Reserved."
 
 [[mods]]
 modId="chaosadditions"
 version="${file.jarVersion}"
 displayName="Chaos Additions"
+authors="Blackout"
 description='''Some new Additions to Chaos Awakens!'''
 itemIcon="chaosadditions:ultimate_aiot"
-configBackground="chaosawakens:textures/gui/advancement_bg.png"
 
 [[dependencies.chaosadditions]]
 modId="forge"
@@ -29,7 +29,7 @@ side="BOTH"
 [[dependencies.chaosadditions]]
 modId="chaosawakens"
 mandatory=true
-versionRange="[0.9,)"
+versionRange="[0.9.1,)"
 ordering="NONE"
 side="BOTH"
 
@@ -38,4 +38,11 @@ modId="geckolib3"
 mandatory=true
 versionRange="[3.0,)"
 ordering="NONE"
+side="BOTH"
+
+[[dependencies.chaosadditions]]
+modId="projecte"
+mandatory=false
+versionRange="[PE1.0,]"
+ordering="AFTER"
 side="BOTH"

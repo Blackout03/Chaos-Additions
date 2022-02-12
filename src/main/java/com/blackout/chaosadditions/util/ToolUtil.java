@@ -22,9 +22,7 @@ public class ToolUtil {
         BlockPos pos = ctx.getClickedPos();
         Direction side = ctx.getClickedFace();
 
-        if (player == null || !player.mayUseItemAt(pos, side, stack)) {
-            return ActionResultType.PASS;
-        } else {
+        if (player != null && player.mayUseItemAt(pos, side, stack)) {
             if (ctx.getClickedFace() != Direction.DOWN && world.isEmptyBlock(pos.above())) {
                 BlockState blockstate = world.getBlockState(pos).getToolModifiedState(world, pos, ctx.getPlayer(), ctx.getItemInHand(), ToolType.HOE);
                 if (blockstate != null) {
@@ -34,14 +32,12 @@ public class ToolUtil {
                     world.playSound(player, pos, SoundEvents.HOE_TILL, SoundCategory.BLOCKS, 1.0F, 1.0F);
                     if (!world.isClientSide) {
                         world.setBlockAndUpdate(pos, blockstate);
-                        ctx.getItemInHand().hurtAndBreak(1, player, (playerEntity) -> {
-                            playerEntity.broadcastBreakEvent(ctx.getHand());
-                        });
+                        ctx.getItemInHand().hurtAndBreak(1, player, (playerEntity) -> playerEntity.broadcastBreakEvent(ctx.getHand()));
                     }
 
                     return ActionResultType.sidedSuccess(world.isClientSide);
                 } else if (world.getBlockState(pos).getBlock() instanceof FarmlandBlock) {
-                    Block block = null;
+                    Block block;
                     block = Blocks.GRASS_BLOCK;
                     if (block != null) {
                         world.setBlockAndUpdate(pos, block.defaultBlockState());
@@ -52,8 +48,8 @@ public class ToolUtil {
                     }
                 }
             }
-            return ActionResultType.PASS;
         }
+        return ActionResultType.PASS;
     }
 
     public static ActionResultType shovelUse(ItemUseContext ctx) {
@@ -79,9 +75,7 @@ public class ToolUtil {
                 if (!world.isClientSide) {
                     world.setBlockAndUpdate(pos, modifiedState);
                     if (player != null) {
-                        ctx.getItemInHand().hurtAndBreak(1, player, (entity) -> {
-                            entity.broadcastBreakEvent(ctx.getHand());
-                        });
+                        ctx.getItemInHand().hurtAndBreak(1, player, (entity) -> entity.broadcastBreakEvent(ctx.getHand()));
                     }
                 }
 
@@ -103,9 +97,7 @@ public class ToolUtil {
             if (!world.isClientSide) {
                 world.setBlockAndUpdate(blockpos, block);
                 if (playerentity != null) {
-                    ctx.getItemInHand().hurtAndBreak(1, playerentity, (player) -> {
-                        player.broadcastBreakEvent(ctx.getHand());
-                    });
+                    ctx.getItemInHand().hurtAndBreak(1, playerentity, (player) -> player.broadcastBreakEvent(ctx.getHand()));
                 }
             }
 

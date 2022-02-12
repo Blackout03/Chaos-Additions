@@ -1,7 +1,7 @@
 package com.blackout.chaosadditions.enums;
 
 import com.blackout.chaosadditions.ChaosAdditions;
-import com.blackout.chaosadditions.registry.ChaosAdditionsItems;
+import com.blackout.chaosadditions.registry.CADItems;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.crafting.Ingredient;
@@ -10,10 +10,10 @@ import net.minecraft.util.SoundEvents;
 
 import java.util.function.Supplier;
 
-public enum ChaosAdditionsArmorMaterial implements IArmorMaterial {
+public enum CADArmorMaterial implements IArmorMaterial {
     //Name, Durability multiplier, Damage Reduction multiplier, Damage Reduction, Enchantability, Sound Events, Toughness, Knockback Resistance, Repair Material
     SAPPHIRE("sapphire", 34, new int[] {3, 7, 8, 3}, 20, SoundEvents.ARMOR_EQUIP_DIAMOND, 2.5f, 0f, () -> {
-        return Ingredient.of(ChaosAdditionsItems.SAPPHIRE.get());
+        return Ingredient.of(CADItems.SAPPHIRE.get());
     });
 
     private final int[] MAX_DAMAGE_ARRAY = new int[] {13, 15, 16, 11};
@@ -26,7 +26,7 @@ public enum ChaosAdditionsArmorMaterial implements IArmorMaterial {
     private final float knockbackResistance;
     private final Supplier<Ingredient> repairMaterial;
 
-    ChaosAdditionsArmorMaterial(String nameIn, int durabilityIn, int[] damageReductionAmountArrayIn, int enchantabilityIn, SoundEvent soundOnEquip, float toughnessIn,
+    CADArmorMaterial(String nameIn, int durabilityIn, int[] damageReductionAmountArrayIn, int enchantabilityIn, SoundEvent soundOnEquip, float toughnessIn,
                                 float knockbackResistanceIn, Supplier<Ingredient> repairMaterialIn) {
 
         this.name = ChaosAdditions.MODID + ":" + nameIn;

@@ -14,13 +14,13 @@ import net.minecraftforge.registries.ForgeRegistries;
 import javax.annotation.Nonnull;
 import java.util.List;
 
-public class ChaosAdditionsLootModifier extends LootModifier {
+public class CADLootModifier extends LootModifier {
     private final float itemChance;
     private final int itemCount;
     private final int extraItemCount;
     private final Item item;
 
-    public ChaosAdditionsLootModifier(ILootCondition[] conditionsIn, float itemChance, int itemCount, int extraItemCount, Item item) {
+    public CADLootModifier(ILootCondition[] conditionsIn, float itemChance, int itemCount, int extraItemCount, Item item) {
         super(conditionsIn);
         this.itemChance = itemChance;
         this.itemCount = itemCount;
@@ -28,18 +28,18 @@ public class ChaosAdditionsLootModifier extends LootModifier {
         this.item = item;
     }
 
-    public static class Serializer extends GlobalLootModifierSerializer<ChaosAdditionsLootModifier> {
+    public static class Serializer extends GlobalLootModifierSerializer<CADLootModifier> {
         @Override
-        public ChaosAdditionsLootModifier read(ResourceLocation name, JsonObject object, ILootCondition[] conditionsIn) {
+        public CADLootModifier read(ResourceLocation name, JsonObject object, ILootCondition[] conditionsIn) {
             float itemChance = JSONUtils.getAsFloat(object, "itemChance");
             int itemCount = JSONUtils.getAsInt(object, "itemCount");
             int extraItemCount = JSONUtils.getAsInt(object, "extraItemCount");
             Item item = ForgeRegistries.ITEMS.getValue(new ResourceLocation((JSONUtils.getAsString(object, "item"))));
-            return new ChaosAdditionsLootModifier(conditionsIn, itemChance, itemCount, extraItemCount, item);
+            return new CADLootModifier(conditionsIn, itemChance, itemCount, extraItemCount, item);
         }
 
         @Override
-        public JsonObject write(ChaosAdditionsLootModifier instance) {
+        public JsonObject write(CADLootModifier instance) {
             JsonObject json = makeConditions(instance.conditions);
             json.addProperty("itemChance", instance.itemChance);
             json.addProperty("itemCount", instance.itemCount);

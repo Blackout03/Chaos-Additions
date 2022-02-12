@@ -1,7 +1,7 @@
 package com.blackout.chaosadditions.data;
 
-import com.blackout.chaosadditions.registry.ChaosAdditionsBlocks;
-import com.blackout.chaosadditions.registry.ChaosAdditionsItems;
+import com.blackout.chaosadditions.registry.CADBlocks;
+import com.blackout.chaosadditions.registry.CADItems;
 import net.minecraft.block.Block;
 import net.minecraft.data.loot.BlockLootTables;
 import net.minecraft.enchantment.Enchantments;
@@ -12,13 +12,13 @@ import net.minecraft.loot.functions.ApplyBonus;
 import net.minecraft.util.IItemProvider;
 import net.minecraftforge.fml.RegistryObject;
 
-public class ChaosAdditionsBlockLootTables extends BlockLootTables {
+public class CADBlockLootTables extends BlockLootTables {
 
 	@Override
 	protected void addTables() {
-		add(ChaosAdditionsBlocks.SAPPHIRE_ORE.get(), createSingleOreDrop(ChaosAdditionsItems.SAPPHIRE.get()));
+		add(CADBlocks.SAPPHIRE_ORE.get(), createSingleOreDrop(CADItems.SAPPHIRE.get()));
 
-		dropSelf(ChaosAdditionsBlocks.SAPPHIRE_BLOCK.get());
+		dropSelf(CADBlocks.SAPPHIRE_BLOCK.get());
 	}
 
 	protected static LootTable.Builder createSingleOreDrop(IItemProvider item) {
@@ -27,6 +27,6 @@ public class ChaosAdditionsBlockLootTables extends BlockLootTables {
 
 	@Override
 	protected Iterable<Block> getKnownBlocks() {
-		return ChaosAdditionsBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
+		return CADBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
 	}
 }
