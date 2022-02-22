@@ -5,7 +5,6 @@ import net.minecraftforge.common.ForgeConfigSpec.ConfigValue;
 import org.apache.commons.lang3.tuple.Pair;
 
 public class CADConfig {
-
     public static class Common {
         public final ConfigValue<Integer> woodenAIOTDamage;
         public final ConfigValue<Integer> stoneAIOTDamage;

@@ -5,6 +5,7 @@ import io.github.chaosawakens.common.blocks.CAFallingOreBlock;
 import io.github.chaosawakens.common.registry.CAItemGroups;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.SoundType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -20,8 +21,8 @@ public class CADBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, ChaosAdditions.MODID);
     public static final DeferredRegister<Item> ITEM_BLOCKS = DeferredRegister.create(ForgeRegistries.ITEMS, ChaosAdditions.MODID);
 
-    public static final RegistryObject<CAFallingOreBlock> SAPPHIRE_ORE = registerBlock("sapphire_ore", () -> new CAFallingOreBlock(Block.Properties.copy(Blocks.OBSIDIAN).strength(3, 3).harvestLevel(3).harvestTool(ToolType.SHOVEL).requiresCorrectToolForDrops()), CAItemGroups.BLOCKS);
-    public static final RegistryObject<Block> SAPPHIRE_BLOCK = registerBlock("sapphire_block", () -> new Block(Block.Properties.copy(Blocks.OBSIDIAN).strength(3, 3).harvestLevel(3).harvestTool(ToolType.PICKAXE).requiresCorrectToolForDrops()), CAItemGroups.BLOCKS);
+    public static final RegistryObject<CAFallingOreBlock> SAPPHIRE_ORE = registerBlock("sapphire_ore", () -> new CAFallingOreBlock(Block.Properties.copy(Blocks.OBSIDIAN).sound(SoundType.GRAVEL).strength(3, 3).harvestLevel(3).harvestTool(ToolType.SHOVEL).requiresCorrectToolForDrops()), CAItemGroups.BLOCKS);
+    public static final RegistryObject<Block> SAPPHIRE_BLOCK = registerBlock("sapphire_block", () -> new Block(Block.Properties.copy(Blocks.OBSIDIAN).sound(SoundType.METAL).strength(3, 3).harvestLevel(3).harvestTool(ToolType.PICKAXE).requiresCorrectToolForDrops()), CAItemGroups.BLOCKS);
 
     public static <B extends Block> RegistryObject<B> registerBlock(String name, Supplier<? extends B> supplier, ItemGroup itemGroup) {
         return registerBlock(name, supplier, itemGroup, true);
