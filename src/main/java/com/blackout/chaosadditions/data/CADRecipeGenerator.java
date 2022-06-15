@@ -1,25 +1,50 @@
 package com.blackout.chaosadditions.data;
 
 import com.blackout.chaosadditions.ChaosAdditions;
+import com.blackout.chaosadditions.registry.CADBlocks;
 import com.blackout.chaosadditions.registry.CADItems;
 import io.github.chaosawakens.common.registry.CAItems;
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.IFinishedRecipe;
-import net.minecraft.data.RecipeProvider;
-import net.minecraft.data.ShapelessRecipeBuilder;
+import net.minecraft.data.*;
 import net.minecraft.item.Items;
+import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.IItemProvider;
+import net.minecraft.util.ResourceLocation;
 
 import java.util.function.Consumer;
 
 public class CADRecipeGenerator extends RecipeProvider {
-
 	public CADRecipeGenerator(DataGenerator generator) {
 		super(generator);
 	}
 
+	private static void recipeAIOT(Consumer<IFinishedRecipe> recipeConsumer, IItemProvider output, IItemProvider input1, IItemProvider input2, IItemProvider input3, IItemProvider input4) {
+		ShapelessRecipeBuilder.shapeless(output).requires(input1).requires(input2).requires(input3).requires(input4).unlockedBy("has_tool1", has(input1)).unlockedBy("has_tool2", has(input2)).unlockedBy("has_tool3", has(input3)).unlockedBy("has_tool4", has(input4)).save(recipeConsumer, output.asItem().getRegistryName());
+		ChaosAdditions.LOGGER.info(output.asItem().getRegistryName());
+	}
+
+	private static void recipeSapphireAIOT(Consumer<IFinishedRecipe> recipeConsumer, IItemProvider output, IItemProvider input1, IItemProvider input2, IItemProvider input3, IItemProvider input4) {
+		ShapelessRecipeBuilder.shapeless(output).requires(input1).requires(input2).requires(input3).requires(input4).unlockedBy("has_tool1", has(input1)).unlockedBy("has_tool2", has(input2)).unlockedBy("has_tool3", has(input3)).unlockedBy("has_tool4", has(input4)).save(recipeConsumer, output.asItem().getRegistryName());
+		ChaosAdditions.LOGGER.info(output.asItem().getRegistryName());
+	}
+
 	@Override
 	protected void buildShapelessRecipes(Consumer<IFinishedRecipe> recipeConsumer) {
+		ShapedRecipeBuilder.shaped(CADBlocks.SAPPHIRE_BLOCK.get()).define('#', CADItems.SAPPHIRE.get()).pattern("###").pattern("###").pattern("###").unlockedBy("has_" + CADItems.SAPPHIRE.get().asItem(), has(CADItems.SAPPHIRE.get())).save(recipeConsumer, CADItems.SAPPHIRE.get().asItem().getRegistryName());
+		ShapelessRecipeBuilder.shapeless(CADItems.SAPPHIRE.get(), 9).requires(CADBlocks.SAPPHIRE_BLOCK.get()).unlockedBy("has_" + CADBlocks.SAPPHIRE_BLOCK.get().asItem(), has(CADBlocks.SAPPHIRE_BLOCK.get())).save(recipeConsumer, CADBlocks.SAPPHIRE_BLOCK.get().asItem().getRegistryName());
+
+		CookingRecipeBuilder.smelting(Ingredient.of(CADBlocks.SAPPHIRE_ORE.get()), CADItems.SAPPHIRE.get(), 0.1F, 200).unlockedBy("has_" + CADBlocks.SAPPHIRE_ORE.get(), has(CADBlocks.SAPPHIRE_ORE.get())).save(recipeConsumer, new ResourceLocation(CADItems.SAPPHIRE.get().asItem().getRegistryName() + "_from_smelting"));
+		CookingRecipeBuilder.blasting(Ingredient.of(CADBlocks.SAPPHIRE_ORE.get()), CADItems.SAPPHIRE.get(), 0.1F, 100).unlockedBy("has_" + CADBlocks.SAPPHIRE_ORE.get(), has(CADBlocks.SAPPHIRE_ORE.get())).save(recipeConsumer, new ResourceLocation(CADItems.SAPPHIRE.get().asItem().getRegistryName() + "_from_blasting"));
+
+		ShapedRecipeBuilder.shaped(CADItems.SAPPHIRE_HELMET.get()).define('#', CADItems.SAPPHIRE.get()).pattern("###").pattern("# #").unlockedBy("has_" + CADItems.SAPPHIRE.get().asItem(), has(CADItems.SAPPHIRE.get())).save(recipeConsumer, CADItems.SAPPHIRE_HELMET.get().asItem().getRegistryName());
+		ShapedRecipeBuilder.shaped(CADItems.SAPPHIRE_CHESTPLATE.get()).define('#', CADItems.SAPPHIRE.get()).pattern("# #").pattern("###").pattern("###").unlockedBy("has_" + CADItems.SAPPHIRE.get().asItem(), has(CADItems.SAPPHIRE.get())).save(recipeConsumer, CADItems.SAPPHIRE_CHESTPLATE.get().asItem().getRegistryName());
+		ShapedRecipeBuilder.shaped(CADItems.SAPPHIRE_LEGGINGS.get()).define('#', CADItems.SAPPHIRE.get()).pattern("###").pattern("# #").pattern("# #").unlockedBy("has_" + CADItems.SAPPHIRE.get().asItem(), has(CADItems.SAPPHIRE.get())).save(recipeConsumer, CADItems.SAPPHIRE_LEGGINGS.get().asItem().getRegistryName());
+		ShapedRecipeBuilder.shaped(CADItems.SAPPHIRE_BOOTS.get()).define('#', CADItems.SAPPHIRE.get()).pattern("# #").pattern("# #").unlockedBy("has_" + CADItems.SAPPHIRE.get().asItem(), has(CADItems.SAPPHIRE.get())).save(recipeConsumer, CADItems.SAPPHIRE_BOOTS.get().asItem().getRegistryName());
+		ShapedRecipeBuilder.shaped(CADItems.SAPPHIRE_SWORD.get()).define('S', net.minecraft.item.Items.STICK).define('#', CADItems.SAPPHIRE.get()).pattern("#").pattern("#").pattern("S").unlockedBy("has_" + CADItems.SAPPHIRE.get().asItem(), has(CADItems.SAPPHIRE.get())).save(recipeConsumer, CADItems.SAPPHIRE_SWORD.get().asItem().getRegistryName());
+		ShapedRecipeBuilder.shaped(CADItems.SAPPHIRE_SHOVEL.get()).define('S', net.minecraft.item.Items.STICK).define('#', CADItems.SAPPHIRE.get()).pattern("#").pattern("S").pattern("S").unlockedBy("has_" + CADItems.SAPPHIRE.get().asItem(), has(CADItems.SAPPHIRE.get())).save(recipeConsumer, CADItems.SAPPHIRE_SHOVEL.get().asItem().getRegistryName());
+		ShapedRecipeBuilder.shaped(CADItems.SAPPHIRE_PICKAXE.get()).define('S', net.minecraft.item.Items.STICK).define('#', CADItems.SAPPHIRE.get()).pattern("###").pattern(" S ").pattern(" S ").unlockedBy("has_" + CADItems.SAPPHIRE.get().asItem(), has(CADItems.SAPPHIRE.get())).save(recipeConsumer, CADItems.SAPPHIRE_PICKAXE.get().asItem().getRegistryName());
+		ShapedRecipeBuilder.shaped(CADItems.SAPPHIRE_AXE.get()).define('S', net.minecraft.item.Items.STICK).define('#', CADItems.SAPPHIRE.get()).pattern("##").pattern("#S").pattern(" S").unlockedBy("has_" + CADItems.SAPPHIRE.get().asItem(), has(CADItems.SAPPHIRE.get())).save(recipeConsumer, CADItems.SAPPHIRE_AXE.get().asItem().getRegistryName());
+		ShapedRecipeBuilder.shaped(CADItems.SAPPHIRE_HOE.get()).define('S', net.minecraft.item.Items.STICK).define('#', CADItems.SAPPHIRE.get()).pattern("##").pattern(" S").pattern(" S").unlockedBy("has_" + CADItems.SAPPHIRE.get().asItem(), has(CADItems.SAPPHIRE.get())).save(recipeConsumer, CADItems.SAPPHIRE_HOE.get().asItem().getRegistryName());
+
 		recipeAIOT(recipeConsumer, CADItems.WOODEN_AIOT.get(), Items.WOODEN_PICKAXE, Items.WOODEN_AXE, Items.WOODEN_SHOVEL, Items.WOODEN_HOE);
 		recipeAIOT(recipeConsumer, CADItems.STONE_AIOT.get(), Items.STONE_PICKAXE, Items.STONE_AXE, Items.STONE_SHOVEL, Items.STONE_HOE);
 		recipeAIOT(recipeConsumer, CADItems.GOLDEN_AIOT.get(), Items.GOLDEN_PICKAXE, Items.GOLDEN_AXE, Items.GOLDEN_SHOVEL, Items.GOLDEN_HOE);
@@ -41,11 +66,7 @@ public class CADRecipeGenerator extends RecipeProvider {
 		recipeAIOT(recipeConsumer, CADItems.RUBY_AIOT.get(), CAItems.RUBY_PICKAXE.get(), CAItems.RUBY_AXE.get(), CAItems.RUBY_SHOVEL.get(), CAItems.RUBY_HOE.get());
 		recipeAIOT(recipeConsumer, CADItems.ULTIMATE_AIOT.get(), CAItems.ULTIMATE_PICKAXE.get(), CAItems.ULTIMATE_AXE.get(), CAItems.ULTIMATE_SHOVEL.get(), CAItems.ULTIMATE_HOE.get());
 
-		recipeAIOT(recipeConsumer, CADItems.SAPPHIRE_AIOT.get(), CADItems.SAPPHIRE_PICKAXE.get(), CADItems.SAPPHIRE_AXE.get(), CADItems.SAPPHIRE_SHOVEL.get(), CADItems.SAPPHIRE_HOE.get());
-	}
-
-	private static void recipeAIOT(Consumer<IFinishedRecipe> recipeConsumer, IItemProvider output, IItemProvider input1, IItemProvider input2, IItemProvider input3, IItemProvider input4) {
-		ShapelessRecipeBuilder.shapeless(output).requires(input1).requires(input2).requires(input3).requires(input4).unlockedBy("has_tool1", has(input1)).unlockedBy("has_tool2", has(input2)).unlockedBy("has_tool3", has(input3)).unlockedBy("has_tool4", has(input4)).save(recipeConsumer);
-		ChaosAdditions.LOGGER.info(output.asItem().getRegistryName());
+		recipeSapphireAIOT(recipeConsumer, CADItems.SAPPHIRE_AIOT.get(), CADItems.SAPPHIRE_PICKAXE.get(), CADItems.SAPPHIRE_AXE.get(), CADItems.SAPPHIRE_SHOVEL.get(), CADItems.SAPPHIRE_HOE.get());
+		// Todo: Meganium AIOT when Pure Chaos Maven is Committed.
 	}
 }

@@ -1,0 +1,11 @@
+{
+	"required": false,
+	"package": "com.blackout.chaosadditions.mixins",
+	"compatibilityLevel": "JAVA_8",
+	"mixins": [],
+	"client": [],
+	"refmap": "chaosadditions.refmap.json",
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

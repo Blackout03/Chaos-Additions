@@ -8,7 +8,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class CADGlobalLootModifier {
-    public static final DeferredRegister<GlobalLootModifierSerializer<?>> LOOT_MODIFIER_SERIALIZERS = DeferredRegister.create(ForgeRegistries.LOOT_MODIFIER_SERIALIZERS, ChaosAdditions.MODID);
+	public static final DeferredRegister<GlobalLootModifierSerializer<?>> LOOT_MODIFIER_SERIALIZERS = DeferredRegister.create(ForgeRegistries.LOOT_MODIFIER_SERIALIZERS, ChaosAdditions.MODID);
 
-    public static final RegistryObject<CADLootModifier.Serializer> SAPPHIRE_TREASURE = LOOT_MODIFIER_SERIALIZERS.register("sapphire_treasure", CADLootModifier.Serializer::new);
+	public static final RegistryObject<CADLootModifier.Serializer> SAPPHIRE_TREASURE = LOOT_MODIFIER_SERIALIZERS.register("sapphire_treasure", CADLootModifier.Serializer::new);
 }

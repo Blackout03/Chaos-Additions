@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "chaosadditions:sapphire_sword"
+    ]
+  },
+  "criteria": {
+    "has_sapphire": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "chaosadditions:sapphire"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "chaosadditions:sapphire_sword"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_sapphire",
+      "has_the_recipe"
+    ]
+  ]
+}

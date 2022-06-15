@@ -13,16 +13,15 @@ import net.minecraft.util.IItemProvider;
 import net.minecraftforge.fml.RegistryObject;
 
 public class CADBlockLootTables extends BlockLootTables {
+	protected static LootTable.Builder createSingleOreDrop(IItemProvider item) {
+		return LootTable.lootTable().withPool(applyExplosionCondition(item, LootPool.lootPool()).apply(ApplyBonus.addOreBonusCount(Enchantments.BLOCK_FORTUNE)).add(ItemLootEntry.lootTableItem(item)));
+	}
 
 	@Override
 	protected void addTables() {
 		add(CADBlocks.SAPPHIRE_ORE.get(), createSingleOreDrop(CADItems.SAPPHIRE.get()));
 
 		dropSelf(CADBlocks.SAPPHIRE_BLOCK.get());
-	}
-
-	protected static LootTable.Builder createSingleOreDrop(IItemProvider item) {
-		return LootTable.lootTable().withPool(applyExplosionCondition(item, LootPool.lootPool()).apply(ApplyBonus.addOreBonusCount(Enchantments.BLOCK_FORTUNE)).add(ItemLootEntry.lootTableItem(item)));
 	}
 
 	@Override

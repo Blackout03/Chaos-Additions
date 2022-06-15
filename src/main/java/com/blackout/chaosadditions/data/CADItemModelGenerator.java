@@ -3,7 +3,6 @@ package com.blackout.chaosadditions.data;
 import com.blackout.chaosadditions.ChaosAdditions;
 import com.blackout.chaosadditions.registry.CADBlocks;
 import com.blackout.chaosadditions.registry.CADItems;
-import com.blackout.chaosadditions.registry.CADItemsPureChaos;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
@@ -19,7 +18,6 @@ import javax.annotation.Nonnull;
 import java.util.Collection;
 
 public class CADItemModelGenerator extends ItemModelProvider {
-
 	public CADItemModelGenerator(DataGenerator generator, ExistingFileHelper existingFileHelper) {
 		super(generator, ChaosAdditions.MODID, existingFileHelper);
 	}
@@ -27,7 +25,7 @@ public class CADItemModelGenerator extends ItemModelProvider {
 	@Override
 	protected void registerModels() {
 		generate(CADItems.ITEMS.getEntries());
-		generate(CADItemsPureChaos.ITEMS.getEntries());
+		generate(CADItems.ITEMS_PURECHAOS.getEntries());
 		generateBlockItems(CADBlocks.ITEM_BLOCKS.getEntries());
 	}
 

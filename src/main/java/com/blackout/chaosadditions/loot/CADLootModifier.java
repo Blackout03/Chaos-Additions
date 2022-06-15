@@ -28,6 +28,17 @@ public class CADLootModifier extends LootModifier {
         this.item = item;
     }
 
+    @Nonnull
+    @Override
+    protected List<ItemStack> doApply(List<ItemStack> generatedLoot, LootContext context) {
+        if (context.getRandom().nextFloat() < itemChance || itemChance == 1) {
+            int count = itemCount + context.getRandom().nextInt(extraItemCount + 1);
+            generatedLoot.add(new ItemStack(item, count));
+        }
+        return generatedLoot;
+    }
+
+
     public static class Serializer extends GlobalLootModifierSerializer<CADLootModifier> {
         @Override
         public CADLootModifier read(ResourceLocation name, JsonObject object, ILootCondition[] conditionsIn) {
@@ -47,15 +58,5 @@ public class CADLootModifier extends LootModifier {
             json.addProperty("item", ForgeRegistries.ITEMS.getKey(instance.item).toString());
             return json;
         }
-    }
-
-    @Nonnull
-    @Override
-    protected List<ItemStack> doApply(List<ItemStack> generatedLoot, LootContext context) {
-        if (context.getRandom().nextFloat() < itemChance || itemChance == 1) {
-            int count = itemCount + context.getRandom().nextInt(extraItemCount+1);
-            generatedLoot.add(new ItemStack(item, count));
-        }
-        return generatedLoot;
     }
 }

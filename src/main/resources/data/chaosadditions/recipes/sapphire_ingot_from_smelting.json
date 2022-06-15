@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "chaosadditions:sapphire_ore"
-  },
-  "result": "chaosadditions:sapphire",
-  "experience": 1.0,
-  "cookingtime": 200
-}

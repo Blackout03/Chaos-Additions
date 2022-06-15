@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "chaosadditions:sapphire_ore"
+  },
+  "result": "chaosadditions:sapphire",
+  "experience": 0.1,
+  "cookingtime": 100
+}
