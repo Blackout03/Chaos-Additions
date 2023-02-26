@@ -37,8 +37,8 @@
 
 
   "tooltip.chaosadditions.default": "Hold SHIFT or CTRL for more info.",
-  "tooltip.chaosadditions.sapphire_ore": "Sapphire Ore is found on Ocean Beds in the Overworld.",
-  "tooltip.chaosadditions.sapphire": "Sapphire Ore is found on Ocean Beds in the Overworld.",
+  "tooltip.chaosawakens.chaosadditions.sapphire_ore": "Sapphire Ore is found on Ocean Beds in the Overworld.",
+  "tooltip.chaosawakens.chaosadditions.sapphire": "Sapphire Ore is found on Ocean Beds in the Overworld.",
   "tooltip.chaosadditions.aiot_1": "Hold Shift and Right Click Wood to Strip it!",
   "tooltip.chaosadditions.aiot_2": "Hold Shift and Right Click Grass to Hoe it!",
   "tooltip.chaosadditions.aiot_3": "Right Click Grass to Path it!"

@@ -26,6 +26,6 @@ public class SapphireAIOTItem extends AIOTItem {
 	public float getDestroySpeed(@Nonnull ItemStack stack, BlockState state) {
 		float defaultSpeed = super.getDestroySpeed(stack, state);
 		boolean isInWater = stack.hasTag() && stack.getTag() != null && stack.getTag().getBoolean("inWater");
-		return isInWater ? (defaultSpeed * 3.0F) * 3.0F : (defaultSpeed / 3.0F) / 3.0F;
+		return isInWater ? (defaultSpeed * 3.0F) * 3.0F : defaultSpeed;
 	}
 }

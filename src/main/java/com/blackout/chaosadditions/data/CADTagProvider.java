@@ -1,9 +1,7 @@
 package com.blackout.chaosadditions.data;
 
 import com.blackout.chaosadditions.ChaosAdditions;
-import com.blackout.chaosadditions.registry.CADBlocks;
 import com.blackout.chaosadditions.registry.CADItems;
-import com.blackout.chaosadditions.registry.CADTags;
 import io.github.chaosawakens.data.CATagProvider.CABlockTagProvider;
 import net.minecraft.data.BlockTagsProvider;
 import net.minecraft.data.DataGenerator;
@@ -35,11 +33,7 @@ public class CADTagProvider extends BlockTagsProvider {
 
 		@Override
 		protected void addTags() {
-			this.tag(CADTags.Items.CUSTOM_TOOLTIPS)
-					.add(CADItems.SAPPHIRE.get(), CADBlocks.SAPPHIRE_ORE.get().asItem());
-
-			this.tag(ItemTags.PIGLIN_LOVED)
-					.add(CADItems.GOLDEN_AIOT.get());
+			this.tag(ItemTags.PIGLIN_LOVED).add(CADItems.GOLDEN_AIOT.get());
 		}
 	}
 }

@@ -96,8 +96,6 @@ dependencies {
     implementation fg.deobf("curse.maven:configured-457570:${project.configured}")
     implementation fg.deobf("curse.maven:catalogue-459701:${project.catalogue}")
 
-    implementation fg.deobf("curse.maven:attributefix-280510:${project.attributefix}")
-
     implementation fg.deobf("curse.maven:worldedit-225608:${project.worldedit}")
 
     implementation fg.deobf("curse.maven:the-one-probe-245211:${project.top}")

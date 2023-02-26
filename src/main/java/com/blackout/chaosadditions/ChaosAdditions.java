@@ -4,7 +4,6 @@ import com.blackout.chaosadditions.config.CADConfig;
 import com.blackout.chaosadditions.data.*;
 import com.blackout.chaosadditions.events.BiomeLoadEventSubscriber;
 import com.blackout.chaosadditions.events.LoginEventHandler;
-import com.blackout.chaosadditions.events.ToolTipEventSubscriber;
 import com.blackout.chaosadditions.registry.CADBlocks;
 import com.blackout.chaosadditions.registry.CADGlobalLootModifier;
 import com.blackout.chaosadditions.registry.CADItems;
@@ -51,15 +50,13 @@ public class ChaosAdditions {
 		} else LOGGER.warn("Cannot get version from mod info");
 
 		LOGGER.debug(MODNAME + " is an Addon for: " + ChaosAwakens.MODNAME + "!");
-		LOGGER.debug("The Mod Version of " + MODNAME + " is: " + VERSION);
-		LOGGER.debug("The Mod ID of " + MODNAME + " is: " + MODID);
-		LOGGER.debug("The Mod ID of " + ChaosAwakens.MODNAME + " is: " + ChaosAwakens.MODID);
+		LOGGER.debug(MODNAME + " Version is: " + VERSION);
+		LOGGER.debug("Mod ID for " + MODNAME + " is: " + MODID);
+		LOGGER.debug("Mod ID for " + ChaosAwakens.MODNAME + " is: " + ChaosAwakens.MODID);
 
 		IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
 		eventBus.addListener(this::gatherData);
-
-		if (FMLEnvironment.dist == Dist.CLIENT) MinecraftForge.EVENT_BUS.addListener(ToolTipEventSubscriber::onToolTipEvent);
 
 		CADBlocks.ITEM_BLOCKS.register(eventBus);
 		CADBlocks.BLOCKS.register(eventBus);

@@ -1,6 +1,8 @@
 package com.blackout.chaosadditions.items;
 
 import com.blackout.chaosadditions.registry.CADItems;
+import io.github.chaosawakens.api.IUtilityHelper;
+import io.github.chaosawakens.common.registry.CAItems;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
@@ -18,15 +20,15 @@ public class SapphireArmorItem extends ArmorItem {
 	}
 
 	@Override
-	public void onArmorTick(@Nonnull ItemStack stack, World world, PlayerEntity player) {
+	public void onArmorTick(ItemStack stack, World world, PlayerEntity player) {
+		if (world.isClientSide) return;
 		if (player.isUnderWater()) {
-			if (player.getItemBySlot(EquipmentSlotType.HEAD).sameItem(CADItems.SAPPHIRE_HELMET.get().getDefaultInstance()) &&
-					player.getItemBySlot(EquipmentSlotType.CHEST).sameItem(CADItems.SAPPHIRE_CHESTPLATE.get().getDefaultInstance()) &&
-					player.getItemBySlot(EquipmentSlotType.LEGS).sameItem(CADItems.SAPPHIRE_LEGGINGS.get().getDefaultInstance()) &&
-					player.getItemBySlot(EquipmentSlotType.FEET).sameItem(CADItems.SAPPHIRE_BOOTS.get().getDefaultInstance())) {
-				player.addEffect(new EffectInstance(Effects.WATER_BREATHING, 100, 0, false, false, false));
-				player.addEffect(new EffectInstance(Effects.DOLPHINS_GRACE, 100, 0, false, false, false));
+			if (player.getArmorSlots() != null) {
+				if (IUtilityHelper.isFullArmorSet(player, CADItems.SAPPHIRE_HELMET.get(), CADItems.SAPPHIRE_CHESTPLATE.get(), CADItems.SAPPHIRE_LEGGINGS.get(), CADItems.SAPPHIRE_BOOTS.get())) {
+					player.addEffect(new EffectInstance(Effects.WATER_BREATHING, 100, 0, false, false, false));
+					player.addEffect(new EffectInstance(Effects.DOLPHINS_GRACE, 100, 0, false, false, false));
+				}
 			}
-		} else player.addEffect(new EffectInstance(Effects.MOVEMENT_SLOWDOWN, 100, 1, false, false, false));
+		}
 	}
 }

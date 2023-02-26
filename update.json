@@ -1,10 +1,11 @@
 {
 	"homepage": "https://blackout03.github.io/mods/chaos-additions.html",
 	"promos": {
-		"1.16.5-latest": "0.4",
-		"1.16.5-recommended": "0.4"
+		"1.16.5-latest": "0.5",
+		"1.16.5-recommended": "0.5"
 	},
 	"1.16.5": {
+		"0.5": "Read the Changelog on my Website",
 		"0.4": "Read the Changelog on my Website",
 		"0.3": "Read the Changelog on my Website",
 		"0.2": "Read the Changelog on my Website",
